@@ -22,6 +22,6 @@ db.sequelize.sync({force: true})
 app.get('/', (req, res)=> {
     res.json({message: 'Welcome to theo app todo'})
 })
-
+require('./app/routes/tutorial.routes')(app);
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, ()=> console.log(`Server is running on port ${PORT}`))
